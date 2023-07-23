@@ -17,7 +17,7 @@ var team2BallsFaced = 0;
 var turn = 1;
 
 const possibleOutcomes = [0, 1, 2, 3, 4, 6, "W"];
-
+// Iteration 3: Write a Game over function
 function gameOver() {
   gameOverAudio.play();
   if (team1Score > team2Score) alert("MI wins");
@@ -25,6 +25,7 @@ function gameOver() {
   if (team2Score === team1Score) alert("It is another superover!");
 }
 
+// Iteration 4: Write an update score function
 function updateScore() {
   $team1Score.textContent = team1Score;
   $team1Wickets.textContent = team1Wickets;
@@ -32,10 +33,12 @@ function updateScore() {
   $team2Wickets.textContent = team2Wickets;
 }
 
+// Reset button function
 resetButton.onclick = () => {
   window.location.reload();
 };
 
+// Iteration 5: Write a function for Strike button
 strikeButton.onclick = () => {
   //play audio
   strikeAudio.pause();
